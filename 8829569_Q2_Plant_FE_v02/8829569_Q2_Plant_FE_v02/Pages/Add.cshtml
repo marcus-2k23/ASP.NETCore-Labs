@@ -1,0 +1,30 @@
+﻿@page
+@model AddModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<form method="POST">
+
+    <div class="form-group">
+        <label asp-for="flower.plantName">Plant Name: </label>
+        <input asp-for="flower.plantName"class="form-control"/>
+        <span asp-validation-for="flower.plantName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="flower.plantType">Plant Type: </label>
+        <input asp-for="flower.plantType"class="form-control"/>
+        <span asp-validation-for="flower.plantType" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="flower.height">Plant height: </label>
+        <input asp-for="flower.height"class="form-control"/>
+        <span asp-validation-for="flower.height" class="text-danger"></span>
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+
